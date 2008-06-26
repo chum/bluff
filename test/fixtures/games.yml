@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  minimum_bet: 1
+  current_seat_id: 1
+  c1: MyString
+  c2: MyString
+  c3: MyString
+  c4: MyString
+  c5: MyString
+  dealer_id: 1
+
+two:
+  minimum_bet: 1
+  current_seat_id: 1
+  c1: MyString
+  c2: MyString
+  c3: MyString
+  c4: MyString
+  c5: MyString
+  dealer_id: 1

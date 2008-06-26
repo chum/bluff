@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  card1: MyString
+  card2: MyString
+  user_id: 1
+  cash: 1
+  wager: 1
+  folded: false
+  game_id: 1
+
+two:
+  card1: MyString
+  card2: MyString
+  user_id: 1
+  cash: 1
+  wager: 1
+  folded: false
+  game_id: 1
