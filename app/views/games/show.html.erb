@@ -1,0 +1,48 @@
+<h1>A Game</h1>
+
+<!-- Community/game stuff -->
+
+Community cards:
+<ul>
+  <li>10-h</li>
+  <li>7-d</li>
+  <li>k-c</li>
+  <li>2-h</li>
+  <li>2-d</li>
+</ul>
+
+<% snoopy_admin = !params[:snoopy_admin].nil? %>
+<% to_act = rand(5)+1 %>
+<br \>Player #<%= to_act %> to act.
+<p \>
+
+<!-- Player stuff -->
+<ol>
+  <% (1...6).each do |player_num| %>
+    <li>
+      <%= "Player \# #{player_num}" %>
+      <ul>
+        <li>Name: Fred</li>
+        <li>Chipstack: 700</li>
+        <li>Chips in pot: 50</li>
+        <li>Cards:
+          <% if player_num == to_act || snoopy_admin %>
+            <ul>
+              <li>J-h</li>
+              <li>8-d</li>
+            </ul>
+          <% end %>
+        </li>
+      </ul>
+      <% if player_num == to_act %>
+        <% form_tag do %>
+          <%= submit_tag "bet/raise" %>
+          <%= text_field_tag :raise %>
+        <% end %>
+        <p><%= button_to :call %></p>
+        <p><%= button_to :fold %></p>
+      <% end %>
+    </li>
+  <% end %>
+</ol>
+

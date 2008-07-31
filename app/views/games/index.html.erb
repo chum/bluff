@@ -1,0 +1,22 @@
+<h1>Listing Games/tables/whatever</h1>
+
+<!-- %= render :partial => 'post', :collection => @posts % -->
+
+<p />
+
+<table border=1>
+  <tr>
+  </tr>
+
+  <% for game in @games %>
+    <tr>
+      <td><%= game.name %></td>
+      <td><%= game.users.count %> players</td>
+      <table border=1>
+        <% game.users.each_with_index do |a_user, index| %>
+          <tr><td>Player #<%= "#{index}: #{a_user.name}" %></td></tr>
+        <% end %>
+      </table>
+    </tr>
+  <% end %>
+</table>
